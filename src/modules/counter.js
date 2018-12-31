@@ -6,7 +6,6 @@ const DECREMENT = 'DECREMENT';
 export const increment = createAction(INCREMENT);
 export const decrement = createAction(DECREMENT);
 
-
 export const incrementAsync = () => dispatch => {
     // 1초 뒤 액션 디스패치
     setTimeout(
@@ -14,7 +13,6 @@ export const incrementAsync = () => dispatch => {
         1000
     );
 }
-
 export const decrementAsync = () => dispatch => {
     // 1초 뒤 액션 디스패치
     setTimeout(
@@ -26,4 +24,4 @@ export const decrementAsync = () => dispatch => {
 export default handleActions({
     [INCREMENT]: (state, action) => state + 1,
     [DECREMENT]: (state, action) => state - 1
-}, 0);
+}, 1);
