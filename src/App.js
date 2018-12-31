@@ -8,12 +8,11 @@ class App extends Component {
     render() {
         const { CounterActions, number } = this.props;
 
-        
         return (
             <div>
                 <h1>{number}</h1>
-                <button onClick={CounterActions.increment}>+</button>
-                <button onClick={CounterActions.decrement}>-</button>
+                <button onClick={CounterActions.incrementAsync}>+</button>
+                <button onClick={CounterActions.decrementAsync}>-</button>
             </div>
         );
     }
